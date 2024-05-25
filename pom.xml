@@ -1,15 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.openrefine</groupId>
-  <artifactId>sample</artifactId>
-  <packaging>jar</packaging>
+  <groupId>io.github.thadguidry</groupId>
+  <artifactId>refine-groovy</artifactId>
   <version>0.1.0</version>
+  <packaging>jar</packaging>
 
-  <name>OpenRefine - Sample extension</name>
-  <description>Example extension provided for demonstration purposes</description>
-  <url>http://openrefine.org/</url>
+  <name>Groovy extension for OpenRefine</name>
+  <description>Supplies a Groovy expression language for OpenRefine</description>
+  <url>http://thadguidry.github.io/refine-groovy/</url>
+
+  <licenses>
+    <license>
+      <name>BSD-3-Clause</name>
+      <url>https://raw.githubusercontent.com/OpenRefine/OpenRefine/master/LICENSE.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <openrefine.version>3.6-SNAPSHOT</openrefine.version>
+    <jackson.version>2.12.3</jackson.version>
+    <rhino.version>1.7.13</rhino.version>
+    <surefire.version>2.22.2</surefire.version>
+  </properties>
 
   <build>
     <plugins>
@@ -23,7 +40,8 @@
           <showDeprecation>true</showDeprecation>
         </configuration>
       </plugin>
-      <!-- package the Java source code of this extension into a .jar file to be loaded by OpenRefine -->
+      <!-- package the Java source code of this extension into a .jar file to be loaded by
+      OpenRefine -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -48,16 +66,16 @@
         <artifactId>maven-dependency-plugin</artifactId>
         <version>3.6.1</version>
         <executions>
-            <execution>
+          <execution>
             <phase>compile</phase>
             <goals>
-                <goal>copy-dependencies</goal>
+              <goal>copy-dependencies</goal>
             </goals>
             <configuration>
-                <outputDirectory>module/MOD-INF/lib</outputDirectory>
-                <includeScope>runtime</includeScope>
+              <outputDirectory>module/MOD-INF/lib</outputDirectory>
+              <includeScope>runtime</includeScope>
             </configuration>
-            </execution>
+          </execution>
         </executions>
       </plugin>
       <!-- Run java unit tests -->
@@ -70,7 +88,7 @@
   </build>
 
   <dependencies>
-     <dependency>
+    <dependency>
       <groupId>org.openrefine</groupId>
       <artifactId>main</artifactId>
       <version>3.8.1</version>
@@ -83,7 +101,14 @@
       <scope>provided</scope>
     </dependency>
 
-   <!-- add here the dependencies of your extension -->
+    <dependency>
+      <groupId>org.apache.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>5.0.0-alpha-8</version>
+      <type>pom</type>
+    </dependency>
+
+    <!-- add here the dependencies of your extension -->
 
     <dependency>
       <groupId>org.testng</groupId>
@@ -91,7 +116,7 @@
       <version>7.10.2</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
 </project>
-

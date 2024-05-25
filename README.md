@@ -1,14 +1,17 @@
-Sample OpenRefine extension
-===========================
+# Refine Groovy
 
-This repository contains a scaffold of an OpenRefine extension, which you can use as a basis to write your own.
-See [our guide to writing extensions](https://openrefine.org/docs/technical-reference/writing-extensions) for more information about the process.
+An OpenRefine extension which adds support for [Groovy](https://groovy-lang.org/) as an expression language.
 
-### Getting started
+# Building it
 
-To start your own extension, click the "Use this template" button in the top right corner of this page.
-This will create a copy of this repository, where you can then change:
-* The extension name and description in `module/MOD-INF/module.properties`
-* The `groupId`, `artifactId`, `name` and `description` fields in `pom.xml`
-* Edit this `README.md` file to describe your extension to potential users and contributors instead of the sample extension's own instructions
+Run
 
+```
+mvn package
+```
+
+This creates a zip file in the target folder, which can then be [installed in OpenRefine](https://docs.openrefine.org/manual/installing#installing-extensions).
+
+# Developing it
+
+To avoid having to unzip the extension in the corresponding directory every time you want to test it, you can also use another set up: simply create a symbolic link from your extensions folder in OpenRefine to the local copy of this repository. You will still need to restart OpenRefine every time you make changes.
