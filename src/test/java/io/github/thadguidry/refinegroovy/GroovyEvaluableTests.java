@@ -71,14 +71,14 @@ public class GroovyEvaluableTests {
         Properties bindings = new Properties();
         bindings.put("cell", cell);
         
-        Object result = parse("return cell.recon.match.id").evaluate(bindings);
+        Object result = parse("cell.recon.match.id").evaluate(bindings);
         Assert.assertEquals(result, "Q5");
     }
     
     @Test
     public void testUndefined() {
-        Object result = parse("return undefined").evaluate(new Properties());
-        Assert.assertEquals(result, null);
+        Object result = parse("undefined").evaluate(new Properties());
+        Assert.assertEquals(result, "No such property: undefined for class: Script1");
     }
 
 }
