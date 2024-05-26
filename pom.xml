@@ -22,7 +22,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <openrefine.version>3.6-SNAPSHOT</openrefine.version>
+    <openrefine.version>3.8.1</openrefine.version>
     <jackson.version>2.12.3</jackson.version>
     <surefire.version>2.22.2</surefire.version>
   </properties>
@@ -83,6 +83,25 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
       </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>	
+          <descriptors>
+            <descriptor>src/assembly/extension.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <id>make-assembly</id>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
@@ -90,7 +109,7 @@
     <dependency>
       <groupId>org.openrefine</groupId>
       <artifactId>main</artifactId>
-      <version>3.8.1</version>
+      <version>${openrefine.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -131,7 +150,13 @@
       <version>7.10.2</version>
       <scope>test</scope>
     </dependency>
-
+    <dependency>
+      <groupId>org.openrefine</groupId>
+      <artifactId>main</artifactId>
+      <version>${openrefine.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
 </project>
