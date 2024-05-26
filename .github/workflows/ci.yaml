@@ -13,7 +13,7 @@ jobs:
   build:
     strategy:
           matrix:
-            openrefine_version: ["3.7.2", "3.8-SNAPSHOT"]
+            openrefine_version: ["3.7.2", "3.8.1"]
     runs-on: ubuntu-latest
 
     steps:
