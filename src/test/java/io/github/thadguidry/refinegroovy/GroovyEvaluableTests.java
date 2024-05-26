@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.google.refine.expr.CellTuple;
-import com.google.refine.expr.ParsingException;
 import com.google.refine.model.Cell;
 import com.google.refine.model.Column;
 import com.google.refine.model.ModelException;
@@ -14,21 +13,13 @@ import com.google.refine.model.Project;
 import com.google.refine.model.Recon;
 import com.google.refine.model.ReconCandidate;
 import com.google.refine.model.Row;
-import io.github.thadguidry.refinegroovy.GroovyEvaluable;
 
 public class GroovyEvaluableTests {
     
-    GroovyEvaluable ge = new GroovyEvaluable(null);
-    
-    protected GroovyEvaluable parse(String source) {
-        try {
-            return ge.evaluate(source);
-        } catch (ParsingException e) {
-            Assert.fail("Parsing the expression raised an unexpected syntax error: "+e.getLocalizedMessage());
-            return null;
-        }
-    }
-    
+    GroovyEvaluable parse(String source) {
+        return new GroovyEvaluable(source);
+    };
+     
     @Test
     public void testReturnConstant() {
         Object result = parse("return 'foo'").evaluate(new Properties());
