@@ -31,9 +31,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  */
 
-let html = "text/html";
-let encoding = "UTF-8";
-let ClientSideResourceManager = Packages.com.google.refine.ClientSideResourceManager;
+var html = "text/html";
+var encoding = "UTF-8";
+var ClientSideResourceManager = Packages.com.google.refine.ClientSideResourceManager;
 
 /*
  * Function invoked to initialize the extension.
