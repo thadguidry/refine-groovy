@@ -78,7 +78,7 @@ public class GroovyEvaluableTests {
     @Test
     public void testUndefined() {
         Object result = parse("undefined").evaluate(new Properties());
-        Assert.assertEquals(result, "No such property: undefined for class: Script1");
+        Assert.assertEquals(result.toString(), "No such property: undefined for class: Script1");
     }
 
 }
