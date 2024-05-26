@@ -2,21 +2,22 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
     <id>refine-groovy-${version}</id>
-    <includeBaseDirectory>false</includeBaseDirectory>
+    <baseDirectory>refine-groovy</baseDirectory>
+    <includeBaseDirectory>true</includeBaseDirectory>
     <formats>
         <format>zip</format>
     </formats>
     <fileSets>
         <fileSet>
             <directory>module/</directory>
-            <outputDirectory>refine-groovy/</outputDirectory>
+            <outputDirectory>module</outputDirectory>
             <excludes>
                 <exclude>**/*.java</exclude>
             </excludes>
         </fileSet>
         <fileSet>
             <directory>module/MOD-INF/lib/</directory>
-            <outputDirectory>refine-groovy/MOD-INF/lib</outputDirectory>
+            <outputDirectory>module/MOD-INF/lib</outputDirectory>
             <excludes>
                 <exclude>**/*.java</exclude>
                 <exclude>**/*.pom</exclude>
@@ -24,7 +25,7 @@
         </fileSet>
         <fileSet>
             <directory>src/main/resources/module</directory>
-            <outputDirectory>refine-groovy</outputDirectory>
+            <outputDirectory>module</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>
