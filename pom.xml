@@ -5,7 +5,7 @@
 
   <groupId>io.github.thadguidry</groupId>
   <artifactId>refine-groovy</artifactId>
-  <version>0.1.0</version>
+  <version>1.0</version>
   <packaging>jar</packaging>
 
   <name>Groovy extension for OpenRefine</name>
@@ -24,7 +24,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <openrefine.version>3.6-SNAPSHOT</openrefine.version>
     <jackson.version>2.12.3</jackson.version>
-    <rhino.version>1.7.13</rhino.version>
     <surefire.version>2.22.2</surefire.version>
   </properties>
 
@@ -35,7 +34,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.13.0</version>
         <configuration>
-          <release>11</release> <!-- minimum version of Java required by your extension -->
+          <release>17</release> <!-- minimum version of Java required by your extension -->
           <encoding>UTF-8</encoding>
           <showDeprecation>true</showDeprecation>
         </configuration>
@@ -106,7 +105,23 @@
       <artifactId>groovy-all</artifactId>
       <version>5.0.0-alpha-8</version>
       <type>pom</type>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.groovy</groupId>
+          <artifactId>groovy-ant</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.groovy</groupId>
+          <artifactId>groovy-cli-picocli</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.groovy</groupId>
+      <artifactId>groovy-ginq</artifactId>
+      <version>5.0.0-alpha-8</version>
+    </dependency> 
 
     <!-- add here the dependencies of your extension -->
 
