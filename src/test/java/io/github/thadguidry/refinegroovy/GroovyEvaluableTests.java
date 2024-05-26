@@ -15,13 +15,14 @@ import com.google.refine.model.Recon;
 import com.google.refine.model.ReconCandidate;
 import com.google.refine.model.Row;
 
+
 public class GroovyEvaluableTests {
     
     GroovyEvaluable ge = new GroovyEvaluable();
     
     protected GroovyEvaluable parse(String source) {
         try {
-            return ge.evaluate(source);
+            return ge(source);
         } catch (ParsingException e) {
             Assert.fail("Parsing the expression raised an unexpected syntax error: "+e.getLocalizedMessage());
             return null;
