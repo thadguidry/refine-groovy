@@ -9,14 +9,14 @@
     <fileSets>
         <fileSet>
             <directory>module/</directory>
-            <outputDirectory>module/</outputDirectory>
+            <outputDirectory>refine-groovy/</outputDirectory>
             <excludes>
                 <exclude>**/*.java</exclude>
             </excludes>
         </fileSet>
         <fileSet>
             <directory>module/MOD-INF/lib/</directory>
-            <outputDirectory>module/MOD-INF/lib</outputDirectory>
+            <outputDirectory>refine-groovy/MOD-INF/lib</outputDirectory>
             <excludes>
                 <exclude>**/*.java</exclude>
                 <exclude>**/*.pom</exclude>
@@ -24,7 +24,7 @@
         </fileSet>
         <fileSet>
             <directory>src/main/resources/module</directory>
-            <outputDirectory>module</outputDirectory>
+            <outputDirectory>refine-groovy</outputDirectory>
         </fileSet>
     </fileSets>
 </assembly>
