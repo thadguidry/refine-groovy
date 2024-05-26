@@ -44,9 +44,9 @@ public class GroovyEvaluable implements Evaluable{
             
             groovy.lang.Binding sharedData = new Binding();
             sharedData.setProperty("value", bindings.get("value"));
-            sharedData.setProperty("cell", new GroovyHasFieldsWrapper((HasFields) bindings.get("cell"), bindings));
-            sharedData.setProperty("cells", new GroovyHasFieldsWrapper((HasFields) bindings.get("cells"), bindings));
-            sharedData.setProperty("row", new GroovyHasFieldsWrapper((HasFields) bindings.get("row"), bindings));
+            sharedData.setProperty("cell", new HasFieldsWrapper((HasFields) bindings.get("cell"), bindings));
+            sharedData.setProperty("cells", new HasFieldsWrapper((HasFields) bindings.get("cells"), bindings));
+            sharedData.setProperty("row", new HasFieldsWrapper((HasFields) bindings.get("row"), bindings));
             sharedData.setProperty("rowIndex", bindings.get("rowIndex"));
             
             // There are many Compiler options, see Groovy Docs

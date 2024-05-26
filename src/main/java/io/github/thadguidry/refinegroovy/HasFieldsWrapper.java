@@ -11,15 +11,13 @@ import com.google.refine.expr.HasFields;
  * to be supported as Groovy objects during a GroovyShell evaluation.
  * Based on {@link com.google.refine.jython.JythonEvaluable}
  */
-public class GroovyHasFieldsWrapper extends GroovyObjectSupport {
-
-    private static final long serialVersionUID = -1275353513262385099L;
+public class HasFieldsWrapper extends GroovyObjectSupport {
 
     public HasFields _obj;
 
     private Properties _bindings;
 
-    public GroovyHasFieldsWrapper(HasFields obj, Properties bindings) {
+    public HasFieldsWrapper(HasFields obj, Properties bindings) {
         _obj = obj;
         _bindings = bindings;
     }
@@ -34,7 +32,7 @@ public class GroovyHasFieldsWrapper extends GroovyObjectSupport {
         Object v = _obj.getField(name, _bindings);
         if (v != null) {    
             if (v instanceof HasFields) {
-                return new GroovyHasFieldsWrapper((HasFields) v, _bindings);
+                return new HasFieldsWrapper((HasFields) v, _bindings);
             } else {
                 return v;
             }
@@ -53,7 +51,7 @@ public class GroovyHasFieldsWrapper extends GroovyObjectSupport {
         Object v = _obj.getField(name, _bindings);
         if (v != null) {
             if (v instanceof HasFields) {
-                return new GroovyHasFieldsWrapper((HasFields) v, _bindings);
+                return new HasFieldsWrapper((HasFields) v, _bindings);
             } else {
                 return v;
             }
