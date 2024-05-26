@@ -16,13 +16,19 @@ import com.google.refine.model.Row;
 
 public class GroovyEvaluableTests {
     
-    GroovyEvaluable parse(String source) {
-        return new GroovyEvaluable(source);
+    GroovyEvaluable parse(String scriptText) {
+        return new GroovyEvaluable(scriptText);
     };
-     
+
+    @Test
+    public void testSimpleExpression() {
+        Object result = parse("1 + 1").evaluate(new Properties());
+        Assert.assertEquals(result, 2);
+    }
+
     @Test
     public void testReturnConstant() {
-        Object result = parse("return 'foo'").evaluate(new Properties());
+        Object result = parse("'foo'").evaluate(new Properties());
         Assert.assertEquals(result, "foo");
     }
     
@@ -30,7 +36,7 @@ public class GroovyEvaluableTests {
     public void testReturnValue() {
         Properties bindings = new Properties();
         bindings.put("value", "bar");
-        Object result = parse("return value").evaluate(bindings);
+        Object result = parse("value").evaluate(bindings);
         Assert.assertEquals(result, "bar");
     }
    
@@ -50,7 +56,7 @@ public class GroovyEvaluableTests {
         bindings.put("value", 1);
         bindings.put("cells", new CellTuple(project, row));
         
-        Object result = parse("return cells['firstColumn'].value").evaluate(bindings);
+        Object result = parse("cells['firstColumn'].value").evaluate(bindings);
         Assert.assertEquals(result, "one");
     }
     
