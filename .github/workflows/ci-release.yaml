@@ -12,9 +12,7 @@ on:
 
 jobs:
   build:
-    strategy:
-          matrix:
-            openrefine_version: ["3.7.2", "3.8.1"]
+
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +26,7 @@ jobs:
         cache: maven
 
     - name: Build with Maven
-      run: mvn -B package -Dopenrefine.version=${{ matrix.openrefine_version }}
+      run: mvn -B package 
     
     - name: Release
       uses: softprops/action-gh-release@v2
