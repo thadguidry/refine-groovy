@@ -39,6 +39,10 @@ var ClientSideResourceManager = Packages.com.google.refine.ClientSideResourceMan
  * Function invoked to initialize the extension.
  */
 function init() {
+  // This prints to the terminal when the extension is initialized
+  Packages.java.lang.System.err.println("Initializing refine-groovy extension");
+  Packages.java.lang.System.err.println("refine-groovy mount point is " + module.getMountPoint());
+
   // Script files to inject into /project page
   ClientSideResourceManager.addPaths(
     "project/scripts",
