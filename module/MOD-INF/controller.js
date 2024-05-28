@@ -43,6 +43,14 @@ function init() {
   Packages.java.lang.System.err.println("Initializing refine-groovy extension");
   Packages.java.lang.System.err.println("refine-groovy mount point is " + module.getMountPoint());
 
+  // Register a new language parser for Groovy
+  Packages.com.google.refine.expr.MetaParser.registerLanguageParser(
+    "groovy",
+    "Groovy",
+    Packages.io.github.thadguidry.refinegroovy.GroovyEvaluable.createParser(),
+    "value"
+  );
+
   // Script files to inject into /project page
   ClientSideResourceManager.addPaths(
     "project/scripts",
