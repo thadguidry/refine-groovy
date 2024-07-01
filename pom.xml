@@ -139,7 +139,7 @@
     <dependency>
       <groupId>org.apache.groovy</groupId>
       <artifactId>groovy-ginq</artifactId>
-      <version>5.0.0-alpha-8</version>
+      <version>5.0.0-alpha-9</version>
     </dependency> 
 
     <!-- add here the dependencies of your extension -->
