@@ -33,4 +33,4 @@ jobs:
       with:
         artifacts: "./packaging/target/*.zip"
         prerelease: true
-        
+        tag: 1.2.4
