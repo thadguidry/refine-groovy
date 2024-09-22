@@ -28,8 +28,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package 
     
-    - name: Create Release
+    - name: Where are we?
       run: ls
+
+    - name: Create Release  
       uses: ncipollo/release-action@v1.14.0
       with:
         artifacts: "/home/runner/work/refine-groovy/refine-groovy/target/refine-groovy-*.zip"
