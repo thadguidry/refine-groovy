@@ -83,12 +83,14 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.5.0</version>
       </plugin>
+      <!-- Package into a .zip file -->
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.7.1</version>
         <configuration>
           <appendAssemblyId>false</appendAssemblyId>	
           <descriptors>
+            <!-- We assemble the .zip as detailed in src/assembly/extension.xml -->
             <descriptor>src/assembly/extension.xml</descriptor>
           </descriptors>
         </configuration>
