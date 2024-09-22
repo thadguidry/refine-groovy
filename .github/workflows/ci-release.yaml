@@ -29,8 +29,9 @@ jobs:
       run: mvn -B package 
     
     - name: Create Release
+      run: ls
       uses: ncipollo/release-action@v1.14.0
       with:
-        artifacts: "./packaging/target/*.zip"
+        artifacts: "/home/runner/work/refine-groovy/refine-groovy/target/refine-groovy-*.zip"
         prerelease: true
         tag: 1.2.4
