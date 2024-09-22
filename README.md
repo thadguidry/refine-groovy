@@ -6,7 +6,7 @@ An [OpenRefine](https://openrefine.org) extension which adds support for [Groovy
 
 1. Download the `.zip` file of the [latest release](https://github.com/thadguidry/refine-groovy/releases) of this extension.
 2. Unzip the file and place the unzipped `refine-groovy` folder in your OpenRefine extensions folder.
-3. For details, read more about [installing extensions in OpennRefine's user manual](https://docs.openrefine.org/manual/installing#installing-extensions).
+3. For details, read more about [installing extensions in OpenRefine's user manual](https://docs.openrefine.org/manual/installing#installing-extensions).
 
 # Build
 
