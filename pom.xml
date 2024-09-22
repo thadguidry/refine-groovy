@@ -22,7 +22,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <openrefine.version>3.8.1</openrefine.version>
+    <openrefine.version>3.8.2</openrefine.version>
     <jackson.version>2.12.3</jackson.version>
     <surefire.version>2.22.2</surefire.version>
   </properties>
@@ -44,7 +44,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>3.4.1</version>
+        <version>3.4.2</version>
         <executions>
           <execution>
             <id>default-jar</id>
@@ -63,7 +63,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.6.1</version>
+        <version>3.8.0</version>
         <executions>
           <execution>
             <phase>compile</phase>
@@ -81,7 +81,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.2.5</version>
+        <version>3.5.0</version>
       </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
@@ -122,7 +122,7 @@
     <dependency>
       <groupId>org.apache.groovy</groupId>
       <artifactId>groovy-all</artifactId>
-      <version>5.0.0-alpha-8</version>
+      <version>5.0.0-alpha-10</version>
       <type>pom</type>
       <exclusions>
         <exclusion>
@@ -139,7 +139,7 @@
     <dependency>
       <groupId>org.apache.groovy</groupId>
       <artifactId>groovy-ginq</artifactId>
-      <version>5.0.0-alpha-8</version>
+      <version>5.0.0-alpha-10</version>
     </dependency> 
 
     <!-- add here the dependencies of your extension -->
