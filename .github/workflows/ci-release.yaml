@@ -34,6 +34,6 @@ jobs:
     - name: Create Release  
       uses: ncipollo/release-action@v1.14.0
       with:
-        artifacts: "/home/runner/work/refine-groovy/refine-groovy/target/refine-groovy-*.zip"
+        artifacts: "/target/refine-groovy.zip"
         prerelease: true
-        tag: 1.2.4
+        tag: 1.3
