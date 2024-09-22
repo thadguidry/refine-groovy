@@ -1,10 +1,16 @@
 # Refine Groovy
 
-An OpenRefine extension which adds support for [Groovy](https://groovy-lang.org/) as an expression language.
+An [OpenRefine](https://openrefine.org) extension which adds support for [Groovy](https://groovy-lang.org/) as an expression language.
 
-# Building it
+# Install
 
-Run
+1. Download the `.zip` file of the [latest release](https://github.com/thadguidry/refine-groovy/releases) of this extension.
+2. Unzip the file and place the unzipped `refine-groovy` folder in your OpenRefine extensions folder.
+3. For details, read more about [installing extensions in OpennRefine's user manual](https://docs.openrefine.org/manual/installing#installing-extensions).
+
+# Build
+
+Run the following:
 
 ```
 mvn package
@@ -12,6 +18,6 @@ mvn package
 
 This creates a zip file in the target folder, which can then be [installed in OpenRefine](https://docs.openrefine.org/manual/installing#installing-extensions).
 
-# Developing it
+# Develop
 
 To avoid having to unzip the extension in the corresponding directory every time you want to test it, you can also use another set up: simply create a symbolic link from your extensions folder in OpenRefine to the local copy of this repository. You will still need to restart OpenRefine every time you make changes.
