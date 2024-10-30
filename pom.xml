@@ -22,7 +22,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <openrefine.version>3.8.4</openrefine.version>
+    <openrefine.version>3.8.5</openrefine.version>
     <jackson.version>2.12.3</jackson.version>
     <surefire.version>2.22.2</surefire.version>
   </properties>
