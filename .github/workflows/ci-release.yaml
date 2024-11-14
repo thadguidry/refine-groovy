@@ -42,3 +42,4 @@ jobs:
         allowUpdates: true
         updateOnlyUnreleased: true
         artifacts: "target/refine-groovy.zip"
+        tag: ${{ github.event.inputs.tag }}
