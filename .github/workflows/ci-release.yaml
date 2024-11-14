@@ -39,8 +39,6 @@ jobs:
     - name: Create Release  
       uses: ncipollo/release-action@v1.14.0
       with:
+        allowUpdates: true
+        updateOnlyUnreleased: true
         artifacts: "target/refine-groovy.zip"
-        generateReleaseNotes: true
-        prerelease: true
-        replacesArtifacts: true
-
