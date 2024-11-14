@@ -8,8 +8,9 @@ on:
     inputs:
       tag:
         description: enter tag to create and release
-  release:
-    [created]
+  push:
+    tags:
+    - '*'
 
 permissions:
   contents: write
@@ -39,3 +40,7 @@ jobs:
       uses: ncipollo/release-action@v1.14.0
       with:
         artifacts: "target/refine-groovy.zip"
+        generateReleaseNotes: true
+        prelease: true
+        replacesArtifacts: true
+
