@@ -41,6 +41,6 @@ jobs:
       with:
         artifacts: "target/refine-groovy.zip"
         generateReleaseNotes: true
-        prelease: true
+        prerelease: true
         replacesArtifacts: true
 
