@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.github.thadguidry.refinegroovy.GroovyEvaluable;
 import com.google.refine.expr.CellTuple;
 import com.google.refine.model.Cell;
 import com.google.refine.model.Column;
