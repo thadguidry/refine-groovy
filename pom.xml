@@ -85,6 +85,17 @@
           </filesets>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>default-jar</id>
+            <phase/><!--We don't need no stink'n JAR file-->
+        </execution>
+        </executions>
+      </plugin>
       <!-- Package into a .zip file -->
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
