@@ -22,7 +22,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <openrefine.version>3.8.7</openrefine.version>
+    <openrefine.version>3.9.0</openrefine.version>
     <jackson.version>2.12.3</jackson.version>
     <surefire.version>2.22.2</surefire.version>
   </properties>
@@ -167,7 +167,7 @@
     </dependency>
     <dependency>
       <groupId>org.openrefine</groupId>
-      <artifactId>main</artifactId>
+      <artifactId>core</artifactId>
       <version>${openrefine.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
