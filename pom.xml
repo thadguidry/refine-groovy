@@ -99,7 +99,7 @@
       <!-- Package into a .zip file -->
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.7.1</version>
+        <version>3.8.0</version>
         <configuration>
           <appendAssemblyId>false</appendAssemblyId>	
           <descriptors>
