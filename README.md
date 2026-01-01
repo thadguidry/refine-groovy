@@ -3,7 +3,7 @@
 An [OpenRefine](https://openrefine.org) extension which adds support for [Groovy](https://groovy-lang.org/) as an expression language.
 
 ### OpenRefine 3.9.0+ support:
-  - [Use Release 1.3.2](https://github.com/thadguidry/refine-groovy/releases/download/1.3.2/refine-groovy.zip)
+  - [Use Release 1.4.0](https://github.com/thadguidry/refine-groovy/releases/download/1.4.0/refine-groovy.zip)
 ### OpenRefine 3.5.0+ support:
   - [Use Release 1.3.1](https://github.com/thadguidry/refine-groovy/releases/download/1.3.1/refine-groovy.zip)
 
