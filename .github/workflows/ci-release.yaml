@@ -40,6 +40,6 @@ jobs:
       uses: ncipollo/release-action@v1.14.0
       with:
         allowUpdates: true
-        updateOnlyUnreleased: true
+        updateOnlyUnreleased: false
         artifacts: "target/refine-groovy.zip"
-        tag: ${{ github.event.inputs.tag }}
+        tag: ${{ github.event.inputs.tag || github.ref_name }}
